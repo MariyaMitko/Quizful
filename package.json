@@ -1,0 +1,23 @@
+{
+  "name": "angular-seed",
+  "private": true,
+  "version": "0.0.0",
+  "description": "A starter project for AngularJS",
+  "repository": "https://github.com/MariyaMitko/Quizful",
+  "license": "MIT",
+  "devDependencies": {
+    "jasmine-allure-reporter": "^1.0.2",
+    "jasmine-core": "^2.4.1",
+    "protractor": "^4.0.9"
+  },
+  "scripts": {
+    "update-deps": "npm update",
+    "prestart": "npm install",
+    "update-webdriver": "webdriver-manager update",
+    "preprotractor": "npm run update-webdriver",
+    "protractor": "protractor e2e-tests/protractor.conf.js"
+  },
+  "dependencies": {
+    "allure-commandline": "^2.5.0"
+  }
+}
