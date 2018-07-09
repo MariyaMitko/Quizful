@@ -11,7 +11,6 @@ describe('First Quizful test', function () {
     beforeEach(function () {
         browser.ignoreSynchronization = true
         browser.get(BASE_URL)
-
     })
 
     it('checking of the page URL', async function () {
