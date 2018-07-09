@@ -1,4 +1,4 @@
-describe('Quizful tests', function () {
+describe('First Quizful test', function () {
 
     const BASE_URL = 'http://www.quizful.net/test'
     const USER_LOGIN = "MariaMitko"

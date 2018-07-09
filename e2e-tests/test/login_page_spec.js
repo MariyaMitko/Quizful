@@ -1,4 +1,4 @@
-describe('opening of the userPage with using of PageObject Pattern', function () {
+describe('Second Quizful test', function () {
 
     const BASE_URL = 'http://www.quizful.net/test'
     const USER_LOGIN = "MariaMitko"
