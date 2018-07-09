@@ -8,21 +8,21 @@ describe('Second Quizful test', function () {
     let loginPage = require('../page/loginPage.js')
     let userPage = require('../page/userPage.js')
 
-    beforeEach(async function () {
+    beforeEach( function () {
         browser.ignoreSynchronization = true
         browser.get(BASE_URL)
-        await mainPage.clickLogIn()
-        await loginPage.logIn(USER_LOGIN, USER_PASSWORD)
+         mainPage.clickLogIn()
+         loginPage.logIn(USER_LOGIN, USER_PASSWORD)
 
     })
 
-    it('checking of the UserName', async function () {
+    it('checking of the UserName',  function () {
         let userName = userPage.getUserName()
-        await expect(userName).toEqual('MariaMitko')
+         expect(userName).toEqual('MariaMitko')
         console.log("UserName test method was executed")
     })
 
-    afterEach(async function () {
-        await userPage.clickLogOut()
+    afterEach( function () {
+         userPage.clickLogOut()
     })
 })

@@ -12,7 +12,7 @@ describe('Protractor Demo App', function() {
         expect(browser.getTitle()).toEqual('Super Calculator')
     })
 
-    it('should add one and two', async function() {
+    it('should add one and two',  function() {
         firstNumber.sendKeys(1)
         secondNumber.sendKeys(2)
         goButton.click()
