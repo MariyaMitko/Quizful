@@ -1,7 +1,7 @@
 var userPage = function () {
 
-    this.getUserName = function () {
-        let nameField = element(by.xpath('//*[@id="user-panel"]/li[1]/b/a'))
+    this.getUserName = async function () {
+        let nameField = await element(by.xpath('//*[@id="user-panel"]/li[1]/b/a'))
         return userName = nameField.getText()
     }
 

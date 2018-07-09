@@ -17,8 +17,8 @@ var loginPage = function (){
 		element(by.name("loginForm.password")).sendKeys(passwordValue)
 	}
 	
-	this.clickOkButton = function(){
-		element(by.name('ok')).click()
+	this.clickOkButton = async function(){
+        await element(by.name('ok')).click()
 		
 	}
 	
