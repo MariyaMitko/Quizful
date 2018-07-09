@@ -8,19 +8,6 @@ let loginPage = function () {
 
     }
 
-    this.enterUserLogin = function (loginValue) {
-        element(by.name("loginForm.login")).sendKeys(loginValue)
-
-    }
-
-    this.enterUserPassword = function (passwordValue) {
-        element(by.name("loginForm.password")).sendKeys(passwordValue)
-    }
-
-    this.clickOkButton = async function () {
-        await element(by.name('ok')).click()
-
-    }
 
     this.logIn = async function (userLogin, userPassword) {
 
