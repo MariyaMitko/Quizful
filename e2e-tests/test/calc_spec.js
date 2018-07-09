@@ -25,7 +25,9 @@ describe('Protractor Demo App', function() {
     })
 
     it('should add four and six', function() {
-        // Fill this in.
+        let EC = protractor.ExpectedConditions
+        browser.wait(EC.presenceOf(element(latestResult)), 10000,
+            "Correct values of input numbers are not presented in 10 seconds")
         expect(latestResult.getText()).toEqual('10')
     })
 
