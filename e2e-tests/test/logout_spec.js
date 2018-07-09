@@ -1,4 +1,4 @@
-describe('Third Quizful test', function () {
+xdescribe('Third Quizful test', function () {
 
     const BASE_URL = 'http://www.quizful.net/test'
     const USER_LOGIN = "MariaMitko"
@@ -16,7 +16,7 @@ describe('Third Quizful test', function () {
 
     })
 
-    it('checking of the LoginOut button', async function () {
+    xit('checking of the LoginOut button', async function () {
         await userPage.clickLogOut()
         let pageURL = userPage.getURL()
         await expect(pageURL).toEqual("http://www.quizful.net/LoginAction.loginForm")
