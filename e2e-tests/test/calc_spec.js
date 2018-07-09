@@ -31,6 +31,9 @@ describe('Protractor Demo App', function() {
 
     it('should read the value from an input', function() {
         firstNumber.sendKeys(1);
+        let EC = protractor.ExpectedConditions
+        browser.wait(EC.presenceOf(element(firstNumber)), 10000,
+            "Correct value of input number is not presented in 3 seconds")
         expect(firstNumber.getAttribute('value')).toEqual('1')
     })
 })
