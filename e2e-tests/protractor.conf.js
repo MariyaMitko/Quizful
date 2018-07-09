@@ -16,7 +16,7 @@ exports.config = {
     framework: 'jasmine',
 
     jasmineNodeOpts: {
-        defaultTimeoutInterval: 30000
+        defaultTimeoutInterval: 50000
     },
 
     SELENIUM_PROMISE_MANAGER: false,
