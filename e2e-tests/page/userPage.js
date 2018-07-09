@@ -6,14 +6,14 @@ var userPage = function () {
     let logoutLink = element(by.xpath('//*[@id="user-panel"]/li[7]/a'))
 
     this.getUserName = async function () {
-        browser.wait(EC.presenceOf(nameField), 10000,
-            "Logout button did not appear in 10 sec")
+        browser.wait(EC.presenceOf(nameField), 15000,
+            "Logout button did not appear in 15 sec")
         return nameField.getText()
     }
 
     this.clickLogOut = async function () {
-        browser.wait(EC.presenceOf(logoutLink), 10000,
-            "Logout button did not appear in 10 sec")
+        browser.wait(EC.presenceOf(logoutLink), 15000,
+            "Logout button did not appear in 15 sec")
         await logoutLink.click()
     }
 
