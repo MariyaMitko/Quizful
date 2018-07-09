@@ -24,7 +24,7 @@ describe('Protractor Demo App', function() {
         expect(latestResult.getText()).toEqual('3')
     })
 
-    xit('should add four and six', function() {
+    it('should add four and six', function() {
         // Fill this in.
         expect(latestResult.getText()).toEqual('10')
     })
