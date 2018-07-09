@@ -4,9 +4,9 @@ describe('Third Quizful test', function () {
     const USER_LOGIN = "MariaMitko"
     const USER_PASSWORD = "ZcysqGthtw13"
 
-    let mainPage = require('../page/mainPage.js')
-    let loginPage = require('../page/loginPage.js')
-    let userPage = require('../page/userPage.js')
+    let mainPage = require('../pages/mainPage.js')
+    let loginPage = require('../pages/loginPage.js')
+    let userPage = require('../pages/userPage.js')
 
     beforeEach(async function () {
         browser.ignoreSynchronization = true
@@ -22,4 +22,5 @@ describe('Third Quizful test', function () {
         await expect(pageURL).toEqual("http://www.quizful.net/LoginAction.loginForm")
         console.log("Logout button test method was executed")
     })
+
 })

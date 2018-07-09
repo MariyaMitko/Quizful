@@ -4,9 +4,9 @@ describe('Second Quizful test', function () {
     const USER_LOGIN = "MariaMitko"
     const USER_PASSWORD = "ZcysqGthtw13"
 
-    let mainPage = require('../page/mainPage.js')
-    let loginPage = require('../page/loginPage.js')
-    let userPage = require('../page/userPage.js')
+    let mainPage = require('../pages/mainPage.js')
+    let loginPage = require('../pages/loginPage.js')
+    let userPage = require('../pages/userPage.js')
 
     beforeEach(async function () {
         browser.ignoreSynchronization = true
@@ -17,8 +17,12 @@ describe('Second Quizful test', function () {
     })
 
     it('checking of the UserName', async function () {
-        var userName = userPage.getUserName()
+        let userName = userPage.getUserName()
         await expect(userName).toEqual('MariaMitko')
         console.log("UserName test method was executed")
+    })
+
+    afterEach(async function () {
+        await userPage.clickLogOut()
     })
 })

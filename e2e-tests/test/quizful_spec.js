@@ -4,12 +4,11 @@ describe('First Quizful test', function () {
     const USER_LOGIN = "MariaMitko"
     const USER_PASSWORD = "ZcysqGthtw13"
 
-    let mainPage = require('../page/mainPage.js')
-    let loginPage = require('../page/loginPage.js')
-    let userPage = require('../page/userPage.js')
+    let mainPage = require('../pages/mainPage.js')
+    let loginPage = require('../pages/loginPage.js')
+    let userPage = require('../pages/userPage.js')
 
     beforeEach(function () {
-
         browser.ignoreSynchronization = true
         browser.get(BASE_URL)
 

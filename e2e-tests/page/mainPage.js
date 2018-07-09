@@ -1,10 +1,13 @@
 require('../page/loginPage.js')
 
-var mainPage = function (){
-	
-	this.clickLogIn = async function(){
-		await element(by.xpath('//*[@id="user-panel"]/li[1]/a')).click()
-	}
+let mainPage = function () {
+    this.clickLogIn = async function () {
+        let loginLink = element(by.xpath('//a[@href="/LoginAction.loginForm"]'))
+        let EC = protractor.ExpectedConditions
+        browser.wait(EC.presenceOf(element(by.xpath('//a[@href="/LoginAction.loginForm"]'))), 10000,
+            "Login link did no appear at the Main page in 10 seconds")
+        await element(by.xpath('//a[@href="/LoginAction.loginForm"]')).click()
+    }
 }
 
-module.exports =  new mainPage()
+module.exports = new mainPage()
