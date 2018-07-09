@@ -8,7 +8,9 @@ exports.config = {
     ],
 
     capabilities: {
-        'browserName': 'chrome'
+        'browserName': 'chrome',
+         shardTestFiles: true,
+         maxInstances: 4
     },
 
     baseUrl: 'http://localhost:8000/',
