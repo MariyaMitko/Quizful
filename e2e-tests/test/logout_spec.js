@@ -8,18 +8,18 @@ describe('Third Quizful test', function () {
     let loginPage = require('../page/loginPage.js')
     let userPage = require('../page/userPage.js')
 
-    beforeEach( function () {
+    beforeEach(async function () {
         browser.ignoreSynchronization = true
         browser.get(BASE_URL)
-         mainPage.clickLogIn()
-         loginPage.logIn(USER_LOGIN, USER_PASSWORD)
+        await mainPage.clickLogIn()
+        await loginPage.logIn(USER_LOGIN, USER_PASSWORD)
 
     })
 
-    it('checking of the LoginOut button',  function () {
-        userPage.clickLogOut()
+    it('checking of the LoginOut button', async function () {
+        await userPage.clickLogOut()
         let pageURL = userPage.getURL()
-        expect(pageURL).toEqual("http://www.quizful.net/LoginAction.loginForm")
+        await expect(pageURL).toEqual("http://www.quizful.net/LoginAction.loginForm")
         console.log("Logout button test method was executed")
     })
 

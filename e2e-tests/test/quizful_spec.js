@@ -14,10 +14,10 @@ describe('First Quizful test', function () {
 
     })
 
-    it('checking of the page URL',  function () {
-         mainPage.clickLogIn()
+    it('checking of the page URL', async function () {
+        await mainPage.clickLogIn()
         let loginPageURL = loginPage.getURL()
-         expect(loginPageURL).toEqual("http://www.quizful.net/LoginAction.loginForm")
+        await expect(loginPageURL).toEqual("http://www.quizful.net/LoginAction.loginForm")
         console.log("URL test method was executed")
     })
 
